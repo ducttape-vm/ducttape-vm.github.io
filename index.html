@@ -6,6 +6,7 @@
   <title>Ducttape - VM workflows, container-style</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/asciinema-player@3/dist/bundle/asciinema-player.css">
   <style>
     :root {
       --bg: #d8ebf2;
@@ -97,6 +98,7 @@
       border-radius: 10px;
       padding: 1.25rem;
     }
+
     .card h3 {
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -104,12 +106,14 @@
       color: var(--text-dim);
       margin-bottom: 0.75rem;
     }
+
     pre {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.82rem;
       line-height: 1.7;
       overflow-x: auto;
     }
+
     pre .kw  { color: var(--pink); }
     pre .cmt { color: var(--text-dim); }
     pre .green { color: var(--green); }
@@ -122,6 +126,12 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.82rem;
       margin-bottom: 0.4rem;
+    }
+
+    .player-wrap {
+      max-width: 820px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     .cmd-line .prompt { color: var(--green); }
 
@@ -165,13 +175,30 @@
 <body>
 
 <header class="hero">
-  <img src="images/ducttape.png" alt="Ducttape logo">
+  <img src="//ducttape-infra.github.io/images/ducttape.png" alt="Ducttape logo">
   <h1>Build, run &amp; share <br><span>VM images</span> like containers</h1>
   <p class="sub">A Dockerfile-like workflow for cloud images and virtual machines</p>
   <div class="cta">
     <a href="https://github.com/ducttape-infra/ducttape" target="_blank">View on GitHub &nearr;</a>
   </div>
 </header>
+
+<div class="player-wrap">
+  <div id="player"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/asciinema-player@3.16.0/dist/bundle/asciinema-player.min.js"></script>
+<script>
+  AsciinemaPlayer.create('/demo.cast', document.getElementById('player'), {
+    cols: 80,
+    rows: 24,
+    autoplay: true,
+    loop: false,
+    speed: 1.5,
+    idleTimeLimit: 5,
+    theme: 'asciinema'
+  });
+</script>
 
 <section>
   <div class="container">

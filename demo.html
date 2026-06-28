@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ducttape VM demo</title>
+  <title>Ducttape demo</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/asciinema-player@3/dist/bundle/asciinema-player.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -66,8 +66,8 @@
 <body>
 
 <div class="hero">
-  <h1>Ducttape VM demo</h1>
-  <p class="sub">Build an httpd VM image, run it, and curl the web page.</p>
+  <h1>Ducttape demo</h1>
+  <p class="sub">Same Containerfile for Podman and Ducttape VM.</p>
   <a class="back" href="/">&larr; Home</a>
 </div>
 
@@ -75,21 +75,21 @@
   <div id="player"></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/asciinema-player@3.16.0/dist/bundle/asciinema-player.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/asciinema-player@3/dist/bundle/asciinema-player.min.js"></script>
 <script>
-  AsciinemaPlayer.create('/demo.cast', document.getElementById('player'), {
+  AsciinemaPlayer.create('/demo-compare.cast', document.getElementById('player'), {
     cols: 80,
     rows: 24,
     autoplay: true,
     loop: false,
-    speed: 1.5,
-    idleTimeLimit: 5,
+    speed: 2,
+    idleTimeLimit: 3,
     theme: 'asciinema'
   });
 </script>
 
 <footer>
-  Part of <a href="https://github.com/ducttape-infra/">ducttape infra tools</a>.
+  <a href="https://github.com/ducttape-infra/ducttape">ducttape-infra</a>
 </footer>
 
 </body>
